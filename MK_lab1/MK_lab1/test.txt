@@ -1,0 +1,1 @@
+void main(){int a,b1,c;a=3;b1=20;if(a>=b1)c=a+1;else c=b1*2;}

@@ -1,0 +1,14 @@
+Program -> func_type func_name ( ) New_space
+func_type -> void
+func_name -> main
+New_space -> { List_oper }
+List_oper -> Oper $ Oper List_oper
+Oper -> Assing_oper $ While_oper $ If_oper
+Assing_oper -> identifiers = AB ; $ identifiers = AB , Assing_oper
+While_oper -> while ( LO ) Oper $ while ( LO ) New_space
+If_oper -> if ( LO ) Oper $ if ( LO ) New_space $ if ( LO ) Oper else Oper $ if ( LO ) Oper else New_space $ if ( LO ) New_space else Oper $ if ( LO ) New_space else New_space
+AB -> AC $ AC + AB $ AC - AB $ AC * AB $ AC / AB
+AC -> IoC $ ( AB )
+LO -> LP $ LP > LO $ LP < LO $ LP >= LO $ LP <= LO $ LP == LO $ LP != LO $ !LO  $ LP | LO  $ LP & LO
+LP -> AB $ ( LO )
+IoC -> identifiers $ constants

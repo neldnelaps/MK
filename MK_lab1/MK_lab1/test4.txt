@@ -1,0 +1,1 @@
+void main (){int a,b,s,c; s=1; a=0; b=1; while(a+b==1|a){ if(a){ c=a+b; s=s+c;} else{ a=b; b=c;} }}

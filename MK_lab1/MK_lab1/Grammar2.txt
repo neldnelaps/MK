@@ -1,0 +1,15 @@
+Program -> funk_type funk_name ( ) New_space
+funk_type -> void
+funk_name -> main
+New_space -> { List_oper }
+List_oper -> Oper $ Oper List_oper
+Oper -> ALG_OPER $ If_oper $ While_oper $ Bool_oper
+If_oper -> if ( Bool_oper ) Oper $ if ( Bool_oper ) New_space $ if ( Bool_oper ) Oper else Oper $ if ( Bool_oper ) Oper else New_space $ if ( Bool_oper ) New_space else Oper $ if ( Bool_oper ) New_space else New_space
+While_oper -> while ( Bool_oper ) Oper $ while ( Bool_oper ) New_space
+ALG_OPER -> identifiers = ALG_OPER ; $ constants $ identifiers $ ( ALG_OPER ) $ constants B $ identifiers B $ ( ALG_OPER ) B $ identifiers = ALG_OPER B;
+B -> ALG_ACT ALG_OPER $ ALG_ACT ALG_OPER B
+Bool_oper -> ALG_OPER EQUAL_ACT ALG_OPER $ ALG_OPER EQUAL_ACT ALG_OPER C $ identifiers $ constants
+C -> BOOL_ACT Bool_oper $ BOOL_ACT Bool_oper C
+ALG_ACT -> + $ - $ * $ /
+BOOL_ACT -> | $ &
+EQUAL_ACT -> > $ < $ == $ <= $ >= $ !=
